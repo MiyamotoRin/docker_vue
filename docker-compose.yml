@@ -5,11 +5,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 9000:8080
+      - 9000:3000
     privileged: true
     volumes:
-      - .:/app
+      - ./advanced-AISpeculation:/app
     tty: true
     working_dir: /app
     stdin_open: true
-    command: yarn serve
