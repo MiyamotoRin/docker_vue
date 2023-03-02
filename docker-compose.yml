@@ -1,0 +1,15 @@
+version: "3"
+services:
+  vue-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:8080
+    privileged: true
+    volumes:
+      - .:/app
+    tty: true
+    working_dir: /app
+    stdin_open: true
+    command: yarn serve
